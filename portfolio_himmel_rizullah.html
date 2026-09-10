@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himmel Rizullah | Portfolio</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,sans-serif;background:#080b12;color:#fff;line-height:1.6;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 80% 20%,#07345a55,transparent 35%),radial-gradient(circle at 10% 80%,#004cff22,transparent 30%);pointer-events:none;z-index:-1}
+    nav{position:fixed;top:0;left:0;width:100%;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;background:#080b12cc;backdrop-filter:blur(14px);z-index:1000;border-bottom:1px solid #ffffff0d}
+    .logo{font-size:25px;font-weight:800;color:#29a9ff}
+    nav ul{display:flex;gap:28px;list-style:none}
+    nav a{color:#fff;text-decoration:none;font-weight:600;transition:.3s}
+    nav a:hover,nav a.active{color:#29a9ff}
+    .menu{display:none;background:none;border:0;color:white;font-size:28px;cursor:pointer}
+    section{padding:100px 8%}
+    .hero{min-height:100vh;display:flex;align-items:center;position:relative}
+    .hero-content{max-width:760px;animation:up 1s ease}
+    .tag{color:#29a9ff;font-weight:700;letter-spacing:3px;margin-bottom:10px}
+    h1{font-size:clamp(45px,8vw,80px);line-height:1.05;margin-bottom:18px}
+    h1 span,.title span{color:#29a9ff}
+    .role{font-size:25px;color:#cbd5e1;margin-bottom:18px}
+    .desc{color:#94a3b8;max-width:650px;font-size:17px;margin-bottom:30px}
+    .btn{display:inline-block;background:#159bea;color:white;padding:13px 26px;border-radius:10px;text-decoration:none;font-weight:700;transition:.3s;box-shadow:0 0 25px #159bea44}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 0 35px #159bea77}
+    .hero-glow{position:absolute;width:330px;height:330px;border-radius:50%;right:10%;background:#159bea18;filter:blur(20px);animation:float 5s ease-in-out infinite}
+    .title{text-align:center;margin-bottom:45px}
+    .title h2{font-size:40px}
+    .about{max-width:850px;margin:auto;text-align:center;color:#94a3b8;font-size:17px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+    .card{background:#101621;border:1px solid #ffffff10;border-radius:16px;padding:28px;transition:.35s}
+    .card:hover{transform:translateY(-8px);border-color:#159bea;box-shadow:0 15px 40px #0006}
+    .skill-icon{font-size:38px;margin-bottom:12px}
+    .card h3{color:#29a9ff;margin-bottom:8px}
+    .card p{color:#94a3b8}
+    .contact{text-align:center}
+    footer{text-align:center;padding:25px;border-top:1px solid #ffffff10;color:#64748b}
+    .reveal{opacity:0;transform:translateY(35px);transition:.7s}
+    .reveal.show{opacity:1;transform:none}
+    @keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-25px)}}
+    @media(max-width:700px){
+      nav{padding:17px 5%}
+      .menu{display:block}
+      nav ul{display:none;position:absolute;top:70px;left:5%;right:5%;padding:20px;background:#0d131dcc;backdrop-filter:blur(15px);border:1px solid #ffffff12;border-radius:14px;flex-direction:column;gap:15px}
+      nav ul.open{display:flex}
+      section{padding:80px 5%}
+      .hero{min-height:90vh}
+      .hero-glow{right:-100px;width:250px;height:250px}
+      .role{font-size:20px}
+      .title h2{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">HIMMEL.</div>
+    <button class="menu" aria-label="Menu">☰</button>
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="tag">HELLO, I'M</p>
+        <h1>Himmel <span>Rizullah</span></h1>
+        <h2 class="role">Prince • Knight • Hero's</h2>
+        <p class="desc">Saya seorang pelajar yang tertarik dengan teknologi, coding, desain, dan berbagai hal kreatif. Saya terus belajar dan membuat sesuatu dari apa yang saya pelajari.</p>
+        <a class="btn" href="#projects">Lihat Project</a>
+      </div>
+      <div class="hero-glow"></div>
+    </section>
+
+    <section id="about" class="reveal">
+      <div class="title"><h2>About <span>Me</span></h2></div>
+      <div class="about">
+        <p>Saya adalah seorang pelajar yang memiliki ketertarikan pada dunia teknologi dan kreativitas. Saya sedang mempelajari programming, website development, desain, dan berbagai kemampuan baru untuk mengembangkan diri.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <div class="title"><h2>My <span>Skills</span></h2></div>
+      <div class="grid">
+        <div class="card"><div class="skill-icon">🌐</div><h3>HTML</h3><p>Membuat struktur website.</p></div>
+        <div class="card"><div class="skill-icon">🎨</div><h3>CSS</h3><p>Membuat tampilan website.</p></div>
+        <div class="card"><div class="skill-icon">⚡</div><h3>JavaScript</h3><p>Membuat website lebih interaktif.</p></div>
+        <div class="card"><div class="skill-icon">✨</div><h3>Design</h3><p>Membuat konsep visual dan desain.</p></div>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <div class="title"><h2>My <span>Projects</span></h2></div>
+      <div class="grid">
+        <div class="card"><h3>Portfolio Website</h3><p>Website portofolio pribadi menggunakan HTML dan CSS.</p><br><a class="btn" href="#">View Project →</a></div>
+        <div class="card"><h3>Attendance System</h3><p>Konsep website sistem absensi untuk kegiatan sekolah.</p><br><a class="btn" href="#">View Project →</a></div>
+        <div class="card"><h3>Mini Game</h3><p>Eksperimen membuat game sederhana menggunakan JavaScript.</p><br><a class="btn" href="#">View Project →</a></div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="title"><h2>Contact <span>Me</span></h2></div>
+      <div class="contact">
+        <p class="desc" style="margin:0 auto 25px">Tertarik untuk menghubungi saya?</p>
+        <a class="btn" href="mailto:emailkamu@gmail.com">Email Me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 HIMMEL. All Rights Reserved.</footer>
+
+  <script>
+    const menu=document.querySelector('.menu'), links=document.querySelector('nav ul');
+    menu.addEventListener('click',()=>links.classList.toggle('open'));
+    document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    const sections=document.querySelectorAll('section[id]'), navLinks=document.querySelectorAll('nav a');
+    window.addEventListener('scroll',()=>{
+      let current='';
+      sections.forEach(s=>{if(scrollY>=s.offsetTop-180)current=s.id});
+      navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current));
+    });
+  </script>
+</body>
+</html>
